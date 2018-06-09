@@ -15,6 +15,9 @@
 		0445140C20CB77C90038B74C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445140B20CB77C90038B74C /* main.m */; };
 		0445141620CB77C90038B74C /* UIPopoverControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445141520CB77C90038B74C /* UIPopoverControllerDemoTests.m */; };
 		0445142120CB77CA0038B74C /* UIPopoverControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445142020CB77CA0038B74C /* UIPopoverControllerDemoUITests.m */; };
+		0445143020CB78CF0038B74C /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445142F20CB78CF0038B74C /* OneViewController.m */; };
+		0445143320CB7BFE0038B74C /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445143220CB7BFE0038B74C /* TwoViewController.m */; };
+		0445143620CB891C0038B74C /* CustomPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445143520CB891C0038B74C /* CustomPopoverBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		0445141C20CB77C90038B74C /* UIPopoverControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPopoverControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0445142020CB77CA0038B74C /* UIPopoverControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerDemoUITests.m; sourceTree = "<group>"; };
 		0445142220CB77CA0038B74C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0445142E20CB78CF0038B74C /* OneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		0445142F20CB78CF0038B74C /* OneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		0445143120CB7BFE0038B74C /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		0445143220CB7BFE0038B74C /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		0445143420CB891C0038B74C /* CustomPopoverBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPopoverBackgroundView.h; sourceTree = "<group>"; };
+		0445143520CB891C0038B74C /* CustomPopoverBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPopoverBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				044513FD20CB77C80038B74C /* AppDelegate.m */,
 				044513FF20CB77C80038B74C /* ViewController.h */,
 				0445140020CB77C80038B74C /* ViewController.m */,
+				0445142E20CB78CF0038B74C /* OneViewController.h */,
+				0445142F20CB78CF0038B74C /* OneViewController.m */,
+				0445143120CB7BFE0038B74C /* TwoViewController.h */,
+				0445143220CB7BFE0038B74C /* TwoViewController.m */,
+				0445143420CB891C0038B74C /* CustomPopoverBackgroundView.h */,
+				0445143520CB891C0038B74C /* CustomPopoverBackgroundView.m */,
 				0445140220CB77C80038B74C /* Main.storyboard */,
 				0445140520CB77C90038B74C /* Assets.xcassets */,
 				0445140720CB77C90038B74C /* LaunchScreen.storyboard */,
@@ -265,6 +280,9 @@
 				0445140120CB77C80038B74C /* ViewController.m in Sources */,
 				0445140C20CB77C90038B74C /* main.m in Sources */,
 				044513FE20CB77C80038B74C /* AppDelegate.m in Sources */,
+				0445143620CB891C0038B74C /* CustomPopoverBackgroundView.m in Sources */,
+				0445143320CB7BFE0038B74C /* TwoViewController.m in Sources */,
+				0445143020CB78CF0038B74C /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
