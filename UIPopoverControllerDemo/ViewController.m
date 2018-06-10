@@ -11,7 +11,7 @@
 #import "TwoViewController.h"
 #import "CustomPopoverBackgroundView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIPopoverControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *showBtn;
 @property (weak, nonatomic) IBOutlet UIButton *hiddenBtn;
 
@@ -31,19 +31,23 @@
 - (IBAction)showPopover:(UIButton *)sender {
     
     OneViewController *oneCtr = [[OneViewController alloc] init];
+    //设置这个后，popoverContentSize将无效
+    //oneCtr.preferredContentSize = CGSizeMake(200, 200);
     //初始化
     popoverCtr = [[UIPopoverController alloc] initWithContentViewController: oneCtr];
+    
     //设置弹出框大小，不设置时系统会自动调整
     popoverCtr.popoverContentSize = CGSizeMake(100, 300);
     //能穿透弹出框进行交互的view，默认没有。此处弹出框显示的情况下，hiddenBtn仍能触发
     popoverCtr.passthroughViews = @[self.hiddenBtn];
     //设置背景色,包括了箭头的颜色，默认白色
     //popoverCtr.backgroundColor = [UIColor clearColor];
-    
-    //自定义背景view
-    popoverCtr.popoverBackgroundViewClass = [CustomPopoverBackgroundView class];
-    
-    //展示弹出框
+    //popoverCtr.popoverLayoutMargins = UIEdgeInsetsMake(100, 100, 100, 100);
+    //自定义背景view,需要重写多个方法。
+    //popoverCtr.popoverBackgroundViewClass = [CustomPopoverBackgroundView class];
+    //代理
+    popoverCtr.delegate = self;
+    //展示弹出框。即给出view的某一块rect,然后箭头出现在这块区域的上/左/下/右的中间。
     [popoverCtr presentPopoverFromRect:self.showBtn.bounds inView:self.showBtn permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
     
 }
@@ -63,10 +67,18 @@
     
 }
 
+- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController {
+    NSLog(@"是否隐藏弹出框");
+    return YES;
+}
 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    NSLog(@"弹出框消失后调用,但如果直接使用dismissPopoverAnimated:方法，不会调用");
+}
 
-
-
+- (void)popoverController:(UIPopoverController *)popoverController willRepositionPopoverToRect:(inout CGRect *)rect inView:(inout UIView *__autoreleasing  _Nonnull *)view {
+    NSLog(@"屏幕旋转时调用，在显示的情况下，改变位置大小改变时不调用");
+}
 
 
 @end

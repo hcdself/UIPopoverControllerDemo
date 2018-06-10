@@ -10,19 +10,17 @@
 
 @implementation CustomPopoverBackgroundView
 
-/* Represents the the length of the base of the arrow's triangle in points.
- */
-
+//箭头底部宽度
 + (CGFloat)arrowBase {
     return 0;
 }
 
-/* Describes the distance between each edge of the background view and the corresponding edge of its content view (i.e. if it were strictly a rectangle).
- */
+//内容偏移，效果上看是阴影的部分
 + (UIEdgeInsets)contentViewInsets {
     return UIEdgeInsetsMake(20, 0, 0, 20);
 }
 
+//箭头高度，不要箭头时可设置为0
 + (CGFloat)arrowHeight {
     return 20;
 }
