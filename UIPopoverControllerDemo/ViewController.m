@@ -23,9 +23,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
 }
 
 - (IBAction)showPopover:(UIButton *)sender {
@@ -49,7 +46,6 @@
     popoverCtr.delegate = self;
     //展示弹出框。即给出view的某一块rect,然后箭头出现在这块区域的上/左/下/右的中间。
     [popoverCtr presentPopoverFromRect:self.showBtn.bounds inView:self.showBtn permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
